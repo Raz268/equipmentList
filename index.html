@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>רשימת ציוד</title>
+    <meta name="description" content="רשימת ציוד אינטרקטיבית- ים יבשה" />
+    <meta name="keywords" content=" רשימת ציוד, טיולים,ים יבשה" />
+    <meta name="author" content="נועם רושו, מירב זוהר, רז עובדיה, קורל כהן" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" href="pic/favicon.png">
+    <!-- CSS -->
+
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-3.6.0.min.js"></script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body class="webpage">
+    <header>
+        <nav aria-label="main-nav" id="mainNav">
+            <ul>
+                <li><a href="index.html">דף בית</a></li>
+                <li><a href="waterways.html">מסלולי מים</a></li>
+                <li><a href="landways.html"> מסלולים יבשים</a></li>
+                <li><a href="#" class="notActive">מסלולי תצפית</a></li>
+                <li><a href="#" class="notActive">מסלולים עירוניים</a></li>
+            </ul>
+        </nav>
+        <h1 id="maidhead"> רשימת ציוד מותאמת  </h1>
+    </header>
+
+    <div id="list">
+        <div id="infoDisplay">
+            <h2 id="infoText">רשימת ציוד ל: </h2>
+        </div>
+
+        <div id="dry" class="Position1 track">
+            <ul>
+                <li>נעלי הרים</li>
+                <li>כובע</li>
+                <li>משקפי שמש</li>
+                <li>קרם הגנה</li>
+                <li>תרמיל 30 ל'</li>
+                <li>אוכל</li>
+            </ul>
+        </div>
+        <div id="wet" class="Position1 track">
+            <ul>
+                <li>סנדלים</li>
+                <li>בגד ים</li>
+                <li>מגבת</li>
+                <li>קרם הגנה</li>
+                <li>תרמיל נגד מים</li>
+                <li>אוכל</li>
+            </ul>
+        </div>
+        <div id="Tent" class="Position1 sleep">
+            <ul>
+                <li>תרמיל נוסף 60 ל'</li>
+                <li>אוהל</li>
+                <li>שק שינה</li>
+                <li>כרית</li>
+                <li>תיק רחצה מותאם לשטח</li>
+            </ul>
+        </div>
+        <div id="hotel" class="Position1 sleep">
+            <ul>
+                <li>מזוודה</li>
+                <li>תיק רחצה</li>
+                <li>הלבשה תחתונה</li>
+                <li>בגדים להחלפה</li>
+            </ul>
+        </div>
+        <div id="babies" class="Position1 group">
+            <ul>
+                <li>מנשא</li>
+                <li>עגלה</li>
+                <li>כובע</li>
+                <li>טיטולים</li>
+            </ul>
+        </div>
+        <div id="children" class="Position1 group">
+            <ul>
+                <li>חולצה מזהה</li>
+                <li>קרם הגנה לילדים</li>
+                <li>בוסטר</li>
+                <li>משחקים</li>
+            </ul>
+        </div>
+        <div id="seniors" class="Position1 group">
+            <ul>
+                <li>מקל הליכה</li>
+                <li>תרופות</li>
+                <li>נעליים מותאמות</li>
+            </ul>
+        </div>
+    </div>
+    <div class="TrackDetails">
+        יעד הנסיעה: <input id="Text1" type="text" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div>
+            <form class="form-control">
+                <div>בחרו סוג מסלול:</div> <br />
+                <div> <input type="radio" id="dry" name="track" value="dry"> מסלולים יבשים <br /> <br /></div>
+                <div><input type="radio" id="wet" name="track" value="wet"> מסלולים רטובים <br /> <br /></div>
+            </form>
+        </div>
+        <div>
+            <form class="form-control">
+                <br /> <div>לינה:</div> <br /> <br />
+                <div><input type="radio" id="noSleep" name="sleep" value="noSleep"> ללא לינה <br /> <br /></div>
+                <div><input type="radio" id="hotel" name="sleep" value="hotel"> לינה במלון <br /> <br /></div>
+                <div>  <input type="radio" id="Tent" name="sleep" value="Tent"> לינה באוהל <br /> <br /></div>
+
+            </form>
+        </div>
+        <div>
+            <form class="form-control">
+                <div>בחרו הרכב מטיילים:</div>
+                <div><input type="checkbox" id="seniors" name="group" value="seniors"> קשישים<br></div>
+                <div> <input type="checkbox" id="babies" name="group" value="babies"> תינוקות<br></div>
+                <div> <input type="checkbox" id="children" name="group" value="children"> ילדים<br><br></div>
+            </form>
+        </div>
+    </div>
+
+    <input id="submit" type="button" value=" צור רשימה" disabled />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>רשימת ציוד סופית</h2>
+            <pre id="modalSummaryText"></pre>
+            <h3>פירוט פריטים:</h3>
+            <div id="modalDetails"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <h2> ים יבשה- מצאו את המסלול המושלם עבורכם. </h2>
+            <br />
+            <img src="pic/favicon.png" alt="לוגו האתר: סמל של קווים כחולים ושביל חום עם הר ושמש">
+            <br />
+            <nav aria-label="footer-nav">
+                <ul>
+                    <li><a href="index.html">דף בית</a></li>
+                    <li><a href="contact.html">צור קשר</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li> <a href="mapNav.html">מפת האתר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
